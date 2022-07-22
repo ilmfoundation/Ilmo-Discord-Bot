@@ -4,7 +4,7 @@ import pyjokes
 import time
 from keep_alive import keep_alive
 
-TOKEN =""
+TOKEN ="OTI3ODgwNjQyMDQ0MjM1ODA3.GK7NSX._UERUNCzDxjqgu4UoOutkP39aO26RwD-hL5P4M"
 
 client = discord.Client()
 
@@ -19,7 +19,9 @@ async def on_message(message):
 
     if message.author == client:
         return
-        
+    if user_message.lower() == "hello" or user_message.lower() == "hi":
+        await message.channel.send(f'Hello {username}!')
+        return    
     if user_message.lower() == "bye":
         await message.channel.send(f'See you later {username}!')
         return
@@ -59,14 +61,18 @@ async def on_message(message):
         facts = ["It's legal for anyone over 5 years old to drink alcohol in the UK.", "Jupiter has over 70 moons.", "A jail for polar bears exists.", "Camels store water their bloodstream, not their hump which is fatty tissue.", "Oxford University is older than the Aztec Empire", "Nintendo has existed as a company since 1889", "Earth used to be purple.", "Most of the visible stars you see in the night sky are binary stars - two stars orbiting each other.", "Venus spins the wrong way compared to other planets.", "In a room with just 23 people, there’s a 50-50 chance that at least two people have the same birthday.", "Babies have 300 bones when born while an adult only has 206 bones.", "A woodpecker's tongue wraps around its brain.", "A Japanese company gives its non-smoking employees 6 extra vacation days to compensate for smoking breaks.", "The national animal of Scotland is the unicorn."]
         await message.channel.send(random.choice(facts))
         return
+    elif user_message.lower() == "!advice":
+        facts = ["If you believe , you can achieve.", "Love your family, work super hard, live your passion.", "Do good and good will come to you.", "You must be the change you wish to see in the world", "When you have a dream, you've got to grab it and never let go.", "Nothing is impossible.", "Keep your face always toward the sunshine, and shadows will fall behind you.", "You will face many defeats in life, but never let yourself be defeated.", "The greatest glory in living lies not in never falling, but in rising every time we fall.", "Life has got all those twists and turns. You've got to hold on tight and off you go.", "Success is not final, failure is not fatal: it is the courage to continue that counts.", "You define your own life. Don't let other people write your script.", "You are never too old to set another goal or to dream a new dream.", "You don't always need a plan. Sometimes you just need to breathe, trust, let go and see what happens."]
+        await message.channel.send(random.choice(facts))
+        return
     elif user_message.lower() == "!motivate":
-        await message.channel.send("You are awesome.")
+        await message.channel.send("If you believe , you can achieve.")
         time.sleep(1)
-        await message.channel.send("You are great.")
+        await message.channel.send("Love your family, work super hard, live your passion.")
         time.sleep(1)
-        await message.channel.send("You can do anything you want.")
+        await message.channel.send("Do good and good will come to you.")
         time.sleep(2)
-        await message.channel.send("You are powerful.")
+        await message.channel.send("You must be the change you wish to see in the world")
         return
     if user_message.lower() == "...":
         await message.channel.send(".....")
