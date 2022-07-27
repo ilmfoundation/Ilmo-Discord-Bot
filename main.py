@@ -4,7 +4,7 @@ import pyjokes
 import time
 from keep_alive import keep_alive
 
-TOKEN ="OTI3ODgwNjQyMDQ0MjM1ODA3.GK7NSX._UERUNCzDxjqgu4UoOutkP39aO26RwD-hL5P4M"
+TOKEN =""
 
 client = discord.Client()
 
