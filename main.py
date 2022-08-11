@@ -2,15 +2,19 @@ import discord
 import random
 import pyjokes
 import time
+from discord.ext import commands
 from keep_alive import keep_alive
 
-TOKEN =""
+TOKEN ="OTI3ODgwNjQyMDQ0MjM1ODA3.G0UXJT.QwHIpE9y6yp7GkepMkWYrnxzOm_OyYtqo_cg9Y"
 
-client = discord.Client()
+client = commands.Bot(command_prefix="!")
 
-@client.event
+@client.event 
 async def on_ready():
-    print('We have loged in as {0.user}'.format(client))
+    await client.change_presence(status=discord.Status.online, activity=discord.Activity(
+        type=discord.ActivityType.watching, name="Ilm E-World"
+    ))
+    print("Bot is Ready")
 
 @client.event
 async def on_message(message):
