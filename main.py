@@ -5,7 +5,7 @@ import time
 from discord.ext import commands
 from keep_alive import keep_alive
 
-TOKEN ="OTI3ODgwNjQyMDQ0MjM1ODA3.G0UXJT.QwHIpE9y6yp7GkepMkWYrnxzOm_OyYtqo_cg9Y"
+TOKEN =""
 
 client = commands.Bot(command_prefix="!")
 
