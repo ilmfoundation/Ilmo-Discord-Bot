@@ -5,14 +5,14 @@ import time
 from discord.ext import commands
 from keep_alive import keep_alive
 
-TOKEN =""
+TOKEN ="OTI3ODgwNjQyMDQ0MjM1ODA3.GNG-V2.la1XqFdXENB7M-QK_csGfRMh72-BEIEl2cq4w8"
 
 client = commands.Bot(command_prefix="!")
 
 @client.event 
 async def on_ready():
     await client.change_presence(status=discord.Status.online, activity=discord.Activity(
-        type=discord.ActivityType.watching, name="Ilm E-World"
+        type=discord.ActivityType.playing, name="Nerdy Stuff"
     ))
     print("Bot is Ready")
 
@@ -33,8 +33,8 @@ async def on_message(message):
         response = f'This is your random number: {random.randrange(10000)}'
         await message.channel.send(response)
         return
-    elif user_message.lower() == "!important":
-        await message.channel.send("@everyone Come here it is important")
+    elif user_message.lower() == "!bot":
+        await message.channel.send("beep bop")
         return
     elif user_message.lower() == "lol":
         await message.channel.send("lol HaHaHa")
